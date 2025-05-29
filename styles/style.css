@@ -1,1 +1,22 @@
+body {
+  background: linear-gradient(to right, rgb(184, 232, 253), rgb(233, 235, 159));
+}
+.app-container {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 30px auto; /*this is used to center with a top margin because by default a div is a block element*/
+  padding: 30px;
+  box-shadow: 1px 1px 15px rgb(22, 63, 80);
+}
 
+.user-input {
+  background: linear-gradient(to right, rgb(184, 232, 253), rgb(233, 235, 159));
+  opacity: 60%;
+  padding-left: 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 60%;
+  max-width: 400px;
+  font-size: 18px;
+}
