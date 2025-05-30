@@ -11,7 +11,7 @@
       <div class="app-container">
         <header style="text-align: center">
           <h1 id="title">Beachyshells Weather Forecast</h1>
-          <form>
+          <form class="search-form" id="search-form">
             <input type="search" placeholder="Enter a city..." required
             id="user-input" class="user-input" opacity: 70%; />
             <input type="submit" value="search" />
@@ -20,7 +20,7 @@
 
         <main>
           <div>
-            <h1>Plattsburgh</h1>
+            <h1 id="searched-city">Plattsburgh</h1>
             <p>
               Sunday 00:00, scattered clouds
               <br />
@@ -31,15 +31,25 @@
         </main>
         <footer>
           Coded by
-          <a href="https://www.shecodes.io/graduates/169424-michelle-durham"
+          <a
+            href="https://www.shecodes.io/graduates/169424-michelle-durham"
+            target="_blank"
             >Michelle Durham</a
           >
           and is open sourced on
-          <a href="https://github.com/Beachyshells/vanilla-take-two"> GitHub</a>
+          <a
+            href="https://github.com/Beachyshells/vanilla-take-two"
+            target="_blank"
+          >
+            GitHub</a
+          >
           and hosted on
-          <a href="https://vanilla-take-two.netlify.app/">Netlify</a>
+          <a href="https://vanilla-take-two.netlify.app/" target="_blank"
+            >Netlify</a
+          >
         </footer>
       </div>
     </div>
+    <script src="scripts/index.js"></script>
   </body>
 </html>
