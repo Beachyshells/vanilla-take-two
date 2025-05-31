@@ -6,6 +6,8 @@ function searchCity(city) {
 
 function displayWeather(response) {
   console.log(response.data);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement;
 }
 
 function pushSubmit(event) {
