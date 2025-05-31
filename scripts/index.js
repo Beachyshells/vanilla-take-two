@@ -6,8 +6,21 @@ function searchCity(city) {
 
 function displayWeather(response) {
   console.log(response.data);
+
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  temperatureElement.style.display = "inline";
+
+  document.querySelector(".degree-farenheit").style.display = "inline";
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.temperature.humidity;
+
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let iconUrlElement = document.querySelector("#weather-icon");
+  iconUrlElement.src = response.data.condition.icon_url;
 }
 
 function pushSubmit(event) {

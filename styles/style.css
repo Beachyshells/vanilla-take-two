@@ -20,3 +20,9 @@ body {
   max-width: 400px;
   font-size: 18px;
 }
+
+.current-weather-wrapper {
+  background-color: aquamarine;
+  display: flex;
+  justify-items: end;
+}
