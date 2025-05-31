@@ -1,6 +1,7 @@
 body {
   background: linear-gradient(to right, rgb(184, 232, 253), rgb(233, 235, 159));
 }
+
 .app-container {
   background-color: white;
   border-radius: 10px;
@@ -14,15 +15,84 @@ body {
   background: linear-gradient(to right, rgb(184, 232, 253), rgb(233, 235, 159));
   opacity: 60%;
   padding-left: 10px;
-  border-radius: 4px;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
   margin-right: 5px;
   width: 60%;
   max-width: 400px;
   font-size: 18px;
 }
 
-.current-weather-wrapper {
-  background-color: aquamarine;
+.submit {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(133, 233, 249);
+  box-shadow: 2px 2px 5px;
+  font-size: 18px;
+  transition: all 150ms ease-in-out;
+}
+.submit:hover {
+  box-shadow: none;
+  background-color: rgb(141, 217, 222);
+}
+.current-weather-container {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #f4f8fb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-top-row {
   display: flex;
-  justify-items: end;
+  justify-content: space-between;
+  align-items: center; /* This aligns icon and text vertically */
+  gap: 1rem;
+}
+
+.left-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.1rem;
+  gap: 0.4rem;
+}
+
+.weather-description {
+  font-style: italic;
+  color: #444;
+}
+
+.right-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#weather-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.temperature-group {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.weather-bottom-row {
+  margin-top: 0.8rem;
+  display: inline;
+  font-size: 1rem;
+}
+
+.weather-bottom-row span {
+  font-weight: 500;
+}
+
+.weather-bottom-row strong {
+  font-weight: 700;
 }

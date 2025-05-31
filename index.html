@@ -8,60 +8,74 @@
     <title>Beachyshells Weather Forecast</title>
   </head>
   <body>
-    <div id="useless-container">
-      <div class="app-container">
-        <header style="text-align: center">
-          <h1 id="title">Beachyshells Weather Forecast</h1>
-          <form class="search-form" id="search-form">
-            <input type="search" placeholder="Enter a city..." required
-            id="user-input" class="user-input" opacity: 70%; />
-            <input type="submit" value="search" />
-          </form>
-        </header>
+    <div class="app-container">
+      <header style="text-align: center">
+        <h1 id="title">Beachyshells Weather Forecast</h1>
 
-        <main>
-          <div class="current-weather-container">
-            <h1 id="searched-city">Plattsburgh</h1>
+        <form class="search-form" id="search-form">
+          <input type="search" placeholder="Enter a city..." required
+          id="user-input" class="user-input" opacity: 70%; />
+          <input type="submit" value="search" class="submit" />
+        </form>
+      </header>
 
-            <div id="current-information">
-              Sunday 00:00, scattered clouds
-              <br />
-              Humidity: <span id="humidity">65</span>%, Wind:
-              <div class="current-weather-wrapper">
-                <span class="todays-emoji" id="todays-emoji">
-                  <img src="" id="weather-icon" />
-                </span>
-                <span class="temperature" id="temperature" style="display: none"
-                  >0
-                </span>
-                <span class="degree-farenheit" style="display: none"> °F </span>
+      <main>
+        <div class="current-weather-container">
+          <h2 id="searched-city">Plattsburgh</h2>
+
+          <div id="current-information">
+            <div class="weather-top-row">
+              <div class="left-info">
+                <span id="todays-day"><strong>Sunday</strong></span>
+                <span id="current-hours">00</span>:<span id="current-minutes"
+                  >00</span
+                >
+                PM,
+                <span class="weather-description">scattered clouds</span>
               </div>
-              <span id="wind">5</span>mph
+
+              <div class="right-info">
+                <img src="" id="weather-icon" alt="Weather Icon" />
+                <span class="temperature-group">
+                  <span id="temperature" style="display: none">0</span>
+                  <span class="degree-fahrenheit" style="display: none"
+                    >°F</span
+                  >
+                </span>
+              </div>
+            </div>
+
+            <div class="weather-bottom-row">
+              <span
+                ><strong>Humidity:</strong> <span id="humidity">0</span>%</span
+              >
+              <span><strong>Wind:</strong> <span id="wind">5</span> mph</span>
             </div>
           </div>
-        </main>
-
-        <footer>
-          Coded by
-          <a
-            href="https://www.shecodes.io/graduates/169424-michelle-durham"
-            target="_blank"
-            >Michelle Durham</a
-          >
-          and is open sourced on
-          <a
-            href="https://github.com/Beachyshells/vanilla-take-two"
-            target="_blank"
-          >
-            GitHub</a
-          >
-          and hosted on
-          <a href="https://vanilla-take-two.netlify.app/" target="_blank"
-            >Netlify</a
-          >
-        </footer>
-      </div>
+        </div>
+      </main>
     </div>
+    <footer>
+      <hr />
+      Coded by
+      <a
+        href="https://www.shecodes.io/graduates/169424-michelle-durham"
+        target="_blank"
+        >Michelle Durham</a
+      >
+      and is open sourced on
+      <a
+        href="https://github.com/Beachyshells/vanilla-take-two"
+        target="_blank"
+      >
+        GitHub</a
+      >
+      and hosted on
+      <a href="https://vanilla-take-two.netlify.app/" target="_blank"
+        >Netlify</a
+      >
+    </footer>
+
     <script src="scripts/index.js"></script>
   </body>
 </html>
