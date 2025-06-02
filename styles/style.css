@@ -75,7 +75,7 @@ h2 {
 }
 @media (max-width: 400px) {
   h2 {
-    font-size: 28;
+    font-size: 24;
   }
 }
 .weather-top-row {
