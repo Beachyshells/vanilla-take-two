@@ -50,11 +50,30 @@ function displayWeather(response) {
   temperatureElement.style.display = "inline";
 
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.temperature.humidity;
+  let humidity = parseFloat(response.data.temperature.humidity);
+  humidityElement.innerHTML = humidity;
+
+  humidityElement.classList.remove("good", "bad");
+  if (humidity >= 30 && humidity <= 60) {
+    humidityElement.classList.add("good");
+  } else {
+    humidityElement.classList.add("bad");
+  }
 
   let windElement = document.querySelector("#wind-speed");
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let windSpeed = parseFloat(response.data.wind.speed);
+  windElement.innerHTML = Math.round(windSpeed);
   windElement.style.display = "inline";
+
+  windElement.classList.remove("good", "bad");
+  if (windSpeed < 5) {
+    windElement.classList.add("good");
+  } else {
+    windElement.classList.add("bad");
+  }
+
+  console.log("Parsed humidity value:", humidity);
+  console.log("Parsed wind speed value:", windSpeed);
 
   let iconUrlElement = document.querySelector("#weather-icon");
   iconUrlElement.src = response.data.condition.icon_url;
