@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/style.css" />
+
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <title>Beachyshells Weather Forecast</title>
   </head>
@@ -21,35 +26,35 @@
 
       <main>
         <div class="current-weather-container">
-          <h2 id="searched-city">Plattsburgh</h2>
-
+          <div class="top-info">
+            <h2 id="searched-city">City of</h2>
+            <div class="temperature-group">
+              <img id="weather-icon" alt="Weather Icon" style="display: none" />
+              <span id="temperature" style="display: none">0</span>
+              <span class="degree-fahrenheit" style="display: none">°F</span>
+            </div>
+          </div>
           <div id="current-information">
             <div class="weather-top-row">
               <div class="left-info">
-                <span id="todays-day"><strong>Sunday</strong></span>
-                <span id="current-hours">00</span>:<span id="current-minutes"
-                  >00</span
-                >
-                PM,
-                <span class="weather-description">scattered clouds</span>
-              </div>
-
-              <div class="right-info">
-                <img src="" id="weather-icon" alt="Weather Icon" />
-                <span class="temperature-group">
-                  <span id="temperature" style="display: none">0</span>
-                  <span class="degree-fahrenheit" style="display: none"
-                    >°F</span
+                <div id="current-time">
+                  <span id="todays-day">Sunday</span>
+                  <span id="current-hours">12</span>:<span id="current-minutes"
+                    >45 PM</span
                   >
-                </span>
+                  <span class="weather-description">scattered clouds</span>
+                </div>
+                <div class="weather-bottom-row">
+                  <span
+                    ><strong>Humidity:</strong> <span id="humidity">0 </span
+                    ><span id="percent">%</span></span
+                  >
+                  <span>
+                    <strong> Wind:</strong>
+                    <span id="wind-speed">5</span> mph</span
+                  >
+                </div>
               </div>
-            </div>
-
-            <div class="weather-bottom-row">
-              <span
-                ><strong>Humidity:</strong> <span id="humidity">0</span>%</span
-              >
-              <span><strong>Wind:</strong> <span id="wind">5</span> mph</span>
             </div>
           </div>
         </div>
@@ -62,8 +67,7 @@
         href="https://www.shecodes.io/graduates/169424-michelle-durham"
         target="_blank"
         >Michelle Durham</a
-      >
-      and is open sourced on
+      >🐞 and is open sourced on
       <a
         href="https://github.com/Beachyshells/vanilla-take-two"
         target="_blank"
