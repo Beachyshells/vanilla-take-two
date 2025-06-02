@@ -54,6 +54,7 @@ function displayWeather(response) {
 
   let windElement = document.querySelector("#wind-speed");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  windElement.style.display = "inline";
 
   let iconUrlElement = document.querySelector("#weather-icon");
   iconUrlElement.src = response.data.condition.icon_url;
@@ -61,6 +62,7 @@ function displayWeather(response) {
 
   let farenheitElement = document.querySelector(".degree-fahrenheit");
   farenheitElement.style.display = "inline";
+
   updateTime(response.data.time);
   if (window.timeUpdateInterval) {
     clearInterval(window.timeUpdateInterval);

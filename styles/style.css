@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to right, rgb(184, 232, 253), rgb(233, 235, 159));
+  background: linear-gradient(to right, #56b6cc, rgb(233, 235, 159));
 }
 
 .app-container {
@@ -13,10 +13,15 @@ body {
 
 h1 {
   font-family: "Overlock SC", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
+}
+.header-image {
+  width: 40px;
+  height: auto;
+  padding-right: 30px;
 }
 .user-input {
-  background: linear-gradient(to right, rgb(184, 232, 253), rgb(233, 235, 159));
+  background: linear-gradient(to right, #56b6cc, rgb(233, 235, 159));
   opacity: 60%;
   padding-left: 10px;
   border: none;
@@ -34,28 +39,39 @@ h1 {
   border: none;
   border-radius: 5px;
   padding: 5px;
-  color: grey;
-  background-color: rgb(173, 229, 251);
+  color: #000;
+  background: linear-gradient(
+    to right,
+    rgba(86, 182, 204, 0.5),
+    rgb(233, 235, 159, 0.5)
+  );
   box-shadow: 2px 2px 5px;
   font-size: 18px;
   transition: all 150ms ease-in-out;
 }
 .submit:hover {
   box-shadow: none;
-  background-color: rgb(121, 211, 225);
+  background-color: rgb(201, 219, 224);
+  color: #444;
 }
 
 .current-weather-container {
   margin-top: 1.2rem;
   padding: 1rem;
   border-radius: 1rem;
-  background: rgb(198, 226, 232);
+  background: linear-gradient(
+    to right,
+    rgba(86, 182, 204, 0.5),
+    rgb(233, 235, 159, 0.5)
+  );
 }
 h2 {
   display: block;
-  font-size: 40px;
+  font-family: "Overlock SC", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
   margin-top: 15px;
-  padding-right: 30px;
+  color: #6e6e6e;
 }
 .weather-top-row {
   display: flex;
@@ -92,11 +108,23 @@ h2 {
   color: orangered;
   font-weight: 600;
 }
+
+.miles-per-hour {
+  font-style: italic;
+  color: orangered;
+  font-weight: 600;
+}
 #percent {
   font-size: smaller;
 }
+#temperature {
+  display: flex;
+  margin-top: 20px;
+}
 .degree-fahrenheit {
-  font-size: smaller;
+  display: flex;
+  font-size: 20px;
+  margin-top: 20px;
 }
 .top-info {
   display: flex;
@@ -105,18 +133,23 @@ h2 {
 }
 
 #weather-icon {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   width: 100px;
   height: auto;
-  margin-top: 10px;
 }
 
+.location-image {
+  width: 20px;
+  height: auto;
+}
 .temperature-group {
+  display: flex;
+  flex-wrap: nowrap;
   font-size: 2.1rem;
   font-weight: bold;
-  margin: 0 auto;
-  justify-items: center;
+  justify-content: end;
+  margin-bottom: 20px;
 }
 
 .weather-bottom-row {
@@ -128,4 +161,18 @@ h2 {
 
 footer {
   text-align: center;
+}
+
+.link {
+  color: #56b6cc;
+}
+
+.good {
+  color: green;
+  font-weight: 600;
+}
+
+.bad {
+  color: orangered;
+  font-weight: 600;
 }
