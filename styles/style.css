@@ -149,7 +149,7 @@ h2 {
 @media (max-width: 400px) {
   #temperature,
   .degree-fahrenheit {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   #weather-icon {
     width: 26px;
