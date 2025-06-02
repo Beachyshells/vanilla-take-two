@@ -130,6 +130,14 @@ h2 {
   font-size: 2.5rem;
   margin-top: 20px;
 }
+
+#weather-icon {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+}
+
 @media (max-width: 600px) {
   #temperature,
   .degree-fahrenheit {
@@ -165,13 +173,6 @@ h2 {
   justify-content: space-between;
 }
 
-#weather-icon {
-  display: flex;
-  flex-direction: column;
-  width: 50px;
-  height: 50px;
-}
-
 .location-image {
   width: 20px;
   height: auto;
@@ -179,11 +180,11 @@ h2 {
 .temperature-group {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.25rem;
   max-width: 100%;
   text-align: center;
-  overflow-wrap: break-word;
+
   font-size: 2.1rem;
   font-weight: bold;
   justify-content: center;
