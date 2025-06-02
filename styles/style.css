@@ -157,7 +157,7 @@ h2 {
   }
   .temperature-group {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 }
 .top-info {
