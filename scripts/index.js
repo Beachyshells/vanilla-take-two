@@ -90,6 +90,8 @@ function displayWeather(response) {
     response.data.time += 60;
     updateTime(response.data.time);
   }, 60000);
+
+  getForecast(response.data.city);
 }
 
 function pushSubmit(event) {
@@ -106,8 +108,10 @@ function getForecast(city) {
   let apiKey = "b9aaeaaf97004f2a03afob830bt63baf";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
   console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -134,5 +138,3 @@ function displayForecast() {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", pushSubmit);
-getForecast();
-displayForecast();
