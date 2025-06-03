@@ -332,7 +332,8 @@ footer {
 }
 .weather-forecast-temperatures {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+
   margin-top: 5px;
   text-align: center;
   color: #f66535;
@@ -386,6 +387,6 @@ footer {
     font-size: 28px;
   }
   .weather-forecast-temperature {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
