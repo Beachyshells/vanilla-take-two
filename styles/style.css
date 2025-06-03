@@ -258,6 +258,8 @@ footer {
     transform: translateY(0);
   }
 }
+
+/*for funsies*/
 .divider {
   position: relative;
   height: 3px;
@@ -269,7 +271,6 @@ footer {
   margin-top: 15px;
 }
 
-/* Shimmer animation overlay */
 .divider::after {
   content: "";
   position: absolute;
@@ -356,5 +357,20 @@ footer {
   }
   .weather-forecast-temperature {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .weather-forecast {
+    gap: 0.3;
+  }
+  .weather-forecast-day {
+    padding: 4px;
+  }
+  .weather-forecast-icon {
+    font-size: 28px;
+  }
+  .weather-forecast-temperature {
+    font-size: 10px;
   }
 }
