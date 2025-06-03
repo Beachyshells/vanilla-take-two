@@ -332,8 +332,8 @@ footer {
 }
 .weather-forecast-temperatures {
   display: flex;
-  justify-content: space-between;
-
+  justify-content: center;
+  gap: 10px;
   margin-top: 5px;
   text-align: center;
   color: #f66535;
@@ -350,12 +350,7 @@ footer {
   .weather-forecast {
     gap: 0.3;
   }
-  .weather-forecast-day {
-    padding: 4px;
-  }
-  .weather-forecast-icon {
-    font-size: 28px;
-  }
+
   .weather-forecast-temperature {
     font-size: 14px;
   }
@@ -363,29 +358,23 @@ footer {
 
 @media (max-width: 400px) {
   .weather-forecast {
-    gap: 0.3;
+    gap: 0.3rem;
   }
-  .weather-forecast-day {
-    padding: 3px;
-  }
-  .weather-forecast-icon {
-    font-size: 28px;
-  }
+
   .weather-forecast-temperature {
     font-size: 10px;
+    padding: 0 4px;
+  }
+  .weather-forecast-temperatures {
+    gap: 4px;
   }
 }
 
 @media (max-width: 320px) {
   .weather-forecast {
-    gap: 0.3;
+    gap: 0.15;
   }
-  .weather-forecast-day {
-    padding: 2px;
-  }
-  .weather-forecast-icon {
-    font-size: 28px;
-  }
+
   .weather-forecast-temperature {
     font-size: 7px;
   }
