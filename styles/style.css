@@ -257,3 +257,32 @@ footer {
     transform: translateY(0);
   }
 }
+
+.weather-forecast {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.weather-forecast-date {
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  font-size: 38px;
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  color: blue;
+}
+
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
