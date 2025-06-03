@@ -365,12 +365,27 @@ footer {
     gap: 0.3;
   }
   .weather-forecast-day {
-    padding: 4px;
+    padding: 3px;
   }
   .weather-forecast-icon {
     font-size: 28px;
   }
   .weather-forecast-temperature {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .weather-forecast {
+    gap: 0.3;
+  }
+  .weather-forecast-day {
+    padding: 2px;
+  }
+  .weather-forecast-icon {
+    font-size: 28px;
+  }
+  .weather-forecast-temperature {
+    font-size: 8px;
   }
 }
