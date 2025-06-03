@@ -333,7 +333,7 @@ footer {
 .weather-forecast-temperatures {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 3px;
   margin-top: 5px;
   text-align: center;
   color: #f66535;
@@ -343,7 +343,9 @@ footer {
   font-weight: 900;
 }
 .weather-forecast-temperature {
-  padding: 0 10px;
+  padding: 0 2px;
+  font-size: 10px;
+  flex: 00 auto;
 }
 
 @media (max-width: 600px) {
@@ -363,16 +365,16 @@ footer {
 
   .weather-forecast-temperature {
     font-size: 10px;
-    padding: 0 4px;
+    padding: 0 2px;
   }
   .weather-forecast-temperatures {
-    gap: 4px;
+    gap: 2px;
   }
 }
 
 @media (max-width: 320px) {
   .weather-forecast {
-    gap: 0.15;
+    gap: 0.15px;
   }
 
   .weather-forecast-temperature {
