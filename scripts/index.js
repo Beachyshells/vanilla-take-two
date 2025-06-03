@@ -98,12 +98,18 @@ function pushSubmit(event) {
   let city = capitalizeWords(searchInput.value.trim());
   if (city) {
     searchCity(city);
+    getForecast(city);
   }
 }
-
+let city = "";
+function getForecast(city) {
+  let apiKey = "b9aaeaaf97004f2a03afob830bt63baf";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+}
 function displayForecast() {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  let forecastHtml = " ";
+  let forecastHtml = "";
 
   days.forEach(function (day) {
     forecastHtml =
@@ -128,5 +134,5 @@ function displayForecast() {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", pushSubmit);
-
+getForecast();
 displayForecast();
