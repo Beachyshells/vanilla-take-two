@@ -136,15 +136,14 @@ h2 {
 }
 
 @media (max-width: 400px) {
-  #temperature {
-    font-size: 0.7rem;
-  }
+  #temperature,
   .degree-fahrenheit {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
+
   #weather-icon {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
   .temperature-group {
     flex-direction: row;
