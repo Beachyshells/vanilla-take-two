@@ -11,15 +11,17 @@ body {
   box-shadow: 1px 1px 15px rgb(22, 63, 80);
 }
 
-h1 {
-  font-family: "Overlock SC", sans-serif;
-  font-weight: 400;
-}
 .header-image {
   width: 40px;
   height: auto;
   padding-right: 30px;
 }
+
+h1 {
+  font-family: "Overlock SC", sans-serif;
+  font-weight: 400;
+}
+
 .user-input {
   background: linear-gradient(to right, #56b6cc, rgb(233, 235, 159));
   opacity: 60%;
@@ -65,6 +67,20 @@ h1 {
     rgb(233, 235, 159, 0.5)
   );
 }
+
+.top-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.weather-top-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
 h2 {
   display: block;
   font-family: "Overlock SC", sans-serif;
@@ -73,16 +89,67 @@ h2 {
   margin-top: 15px;
   color: #000;
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
-.weather-top-row {
+@media (max-width: 400px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+#weather-icon {
   display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  align-items: flex-start;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+}
+#temperature {
+  display: flex;
+  margin-top: 20px;
+}
+#temperature,
+.degree-fahrenheit {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  #temperature,
+  .degree-fahrenheit {
+    font-size: 1.5rem;
+  }
+
+  #weather-icon {
+    display: flex;
+    flex-direction: column;
+    width: 36px;
+    height: 36px;
+  }
+  .temperature-group {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 400px) {
+  #temperature {
+    font-size: 0.7rem;
+  }
+  .degree-fahrenheit {
+    font-size: 0.5rem;
+  }
+  #weather-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .temperature-group {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 
 .left-info {
@@ -119,58 +186,6 @@ h2 {
 }
 #percent {
   font-size: smaller;
-}
-#temperature {
-  display: flex;
-  margin-top: 20px;
-}
-#temperature,
-.degree-fahrenheit {
-  font-weight: bold;
-  font-size: 2.5rem;
-  margin-top: 20px;
-}
-
-#weather-icon {
-  display: flex;
-  flex-direction: column;
-  width: 50px;
-  height: 50px;
-}
-
-@media (max-width: 600px) {
-  #temperature,
-  .degree-fahrenheit {
-    font-size: 1.8rem;
-  }
-  #weather-icon {
-    width: 32px;
-    height: 32px;
-  }
-  .temperature-group {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
-
-@media (max-width: 400px) {
-  #temperature,
-  .degree-fahrenheit {
-    font-size: 0.7rem;
-  }
-  #weather-icon {
-    width: 28px;
-    height: 28px;
-  }
-  .temperature-group {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
-.top-info {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
 }
 
 .location-image {
