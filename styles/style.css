@@ -231,27 +231,26 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 80px; /* adjust as needed */
-  pointer-events: none; /* allows clicks to pass through */
+  height: 80px;
+  pointer-events: none;
   z-index: 10;
 }
 
 .boat {
   position: absolute;
   bottom: 0;
-  left: -100px; /* starts off screen */
-  width: 80px; /* size of the boat */
+  left: -100px;
+  width: 80px;
   animation: sail 20s linear infinite;
 }
 
-/* Animation to move the boat across */
 @keyframes sail {
   0% {
     left: -100px;
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px); /* slight bobbing effect */
+    transform: translateY(-5px);
   }
   100% {
     left: 100vw;
