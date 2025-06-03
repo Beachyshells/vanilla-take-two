@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to right, #56b6cc, rgb(233, 235, 159));
+  overflow: hidden;
 }
 
 .app-container {
@@ -170,7 +171,7 @@ h2 {
 
 #todays-day {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .weather-description {
@@ -213,16 +214,16 @@ footer {
 }
 
 .link {
-  color: #56b6cc;
+  color: #e63e06;
 }
 
 .good {
-  color: green !important;
+  color: #089284 !important;
   font-weight: 600;
 }
 
 .bad {
-  color: orangered !important;
+  color: #f66535 !important;
   font-weight: 600;
 }
 
@@ -260,29 +261,56 @@ footer {
 
 .weather-forecast {
   display: flex;
-  margin-top: 10px;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  overflow: hidden;
+}
+.weather-forecast-day {
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 6px;
+  text-align: center;
 }
 .weather-forecast-date {
+  flex: 1 1 0;
+  min-width: 0;
   text-align: center;
-  color: rgba(39, 33, 66, 0.4);
-  font-size: 16px;
-  line-height: 20px;
-  margin-bottom: 10px;
+
+  color: rgba(39, 33, 66, 0.6);
+  padding: 2px;
 }
 
 .weather-forecast-icon {
   font-size: 38px;
   text-align: center;
+  margin-bottom: 3px;
 }
 .weather-forecast-temperatures {
   display: flex;
   justify-content: center;
   font-size: 16px;
   text-align: center;
-  color: blue;
+  color: #f66535;
 }
 
 .weather-forecast-temperature {
   padding: 0 10px;
+}
+
+@media (max-width) {
+  .weather-forecast {
+    gap: 0.3;
+  }
+  .weather-forecast-day {
+    padding: 4px;
+  }
+  .weather-forecast-icon {
+    font-size: 28px;
+  }
+  weather-forecast-temperature {
+    font-size: 14px;
+  }
 }
